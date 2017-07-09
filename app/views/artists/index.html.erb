@@ -1,0 +1,16 @@
+<div class="row">
+  <h1>Artists</h1>
+  <ul>
+    <% @artists.each do |artist| %>
+      <li><%= link_to artist.artist_name, artist_path(artist) %></li>
+      <div>
+        <div>
+          <%= image_tag artist.image %>
+        </div>
+
+        <p>
+          <%= link_to "Remove", artist_path(artist.id), method: :delete, data: { confirm: "Are you sure?"} %>
+        </p>
+      </div>
+    <% end %>
+  </ul>

@@ -1,5 +1,15 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe Song, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+
+  describe "association with artist" do
+    # let(:artist) { create :user }
+
+    it "belongs to a artist" do
+      song = artist.song.new(name: "Manu Chao")
+
+      expect(song.artist).to eq(artist)
+    end
+end
 end

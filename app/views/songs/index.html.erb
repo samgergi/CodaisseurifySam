@@ -1,0 +1,9 @@
+<div class="row">
+  <h1>Songs</h1>
+  <ul>
+    <% @songs.each do |song| %>
+      <li><%= song.song_name %></li>
+    <% end %>
+    <%= link_to "Add new song", new_song_path, class: "btn btn-primary" %>
+  </ul>
+</div>

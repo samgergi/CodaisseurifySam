@@ -2,15 +2,13 @@
   <h1>Artists</h1>
   <ul>
     <% @artists.each do |artist| %>
+    <hr/>
       <li><%= link_to artist.artist_name, artist_path(artist) %></li>
+    <hr/>
       <div>
         <div>
-          <%= image_tag artist.image %>
+          <%= image_tag artist.artist_image %>
         </div>
-
-        <p>
-          <%= link_to "Remove", artist_path(artist.id), method: :delete, data: { confirm: "Are you sure?"} %>
-        </p>
       </div>
     <% end %>
   </ul>

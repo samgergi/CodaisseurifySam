@@ -1,7 +1,8 @@
 <div class="row">
   <h1>Songs for <%= @artist.artist_name %></h1>
-  <%= link_to "Edit artist", edit_artist_path(@artist) %>
-
+  <%= link_to 'Edit artist', edit_artist_path(@artist) %>
+  <%= link_to 'Delete artist', artist_path(@artist), method: :delete, data: { confirm: "Are you sure you want to delete this artist? " } %>
+  <hr/>
   <div>
     <%= image_tag @artist.artist_image %>
   </div>
@@ -10,17 +11,17 @@
     <div>
       <h2>All songs from this artist</h2>
     </div>
-
+    <hr/>
     <% @artist.songs.each do |song| %>
     <li>
-      <%= song.song_name %> <%= link_to "Delete Song", song_path(song), method: :delete, data: {confirm: "Are you sure you want to delete this song?"} %>
+      <%= song.song_name %> <%= link_to "Delete Song", song_path(song), method: :delete, data: { confirm: "Are you sure you want to delete this song? " } %>
     </li>
     <% end %>
     <li>
       <%= render 'songs/form' %>
     </li>
 
-
+    <hr/>
 
   </ul>
   <%= link_to "All Artists", root_path %>

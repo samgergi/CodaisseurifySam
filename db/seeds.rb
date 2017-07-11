@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # Artists
-j_cole = Artist.create! ( { artist_name: "J. Cole", artist_age: 32, artist_image: "http://res.cloudinary.com/samge/image/upload/v1499528121/J.cole_dv3gel.jpg" } )
-beethoven = Artist.create! ( { artist_name: "Beethoven", artist_age: 247,  artist_image: "http://res.cloudinary.com/samge/image/upload/v1499528121/Beethoven_rcgojy.jpg" } )
-ariana_grande = Artist.create! ( { artist_name: "Ariana Grande", artist_age: 24, artist_image: "http://res.cloudinary.com/samge/image/upload/v1499528121/Ariana_Grande_emniai.jpg" } )
-erykah_badu, = Artist.create! ( { artist_name: "Erykah Badu,", artist_age: 46, artist_image: "http://res.cloudinary.com/samge/image/upload/v1499528121/Erykah_Badu_i0jrwu.jpg" } )
-bob_marley = Artist.create! ( { artist_name: "Bob Marley", artist_age: 72,  artist_image: "http://res.cloudinary.com/samge/image/upload/v1499528121/Bob_Marley_odkrnx.jpg"  } )
+j_cole = Artist.create! ( { artist_name: "J. Cole", artist_age: 32, remote_artist_image_url: "http://res.cloudinary.com/samge/image/upload/v1499528121/J.cole_dv3gel.jpg" } )
+beethoven = Artist.create! ( { artist_name: "Beethoven", artist_age: 247,  remote_artist_image_url: "http://res.cloudinary.com/samge/image/upload/v1499528121/Beethoven_rcgojy.jpg" } )
+ariana_grande = Artist.create! ( { artist_name: "Ariana Grande", artist_age: 24, remote_artist_image_url: "http://res.cloudinary.com/samge/image/upload/v1499528121/Ariana_Grande_emniai.jpg" } )
+erykah_badu, = Artist.create! ( { artist_name: "Erykah Badu,", artist_age: 46, remote_artist_image_url: "http://res.cloudinary.com/samge/image/upload/v1499528121/Erykah_Badu_i0jrwu.jpg" } )
+bob_marley = Artist.create! ( { artist_name: "Bob Marley", artist_age: 72,  remote_artist_image_url: "http://res.cloudinary.com/samge/image/upload/v1499528121/Bob_Marley_odkrnx.jpg"  } )
 
 # Songs
 for_whom_the_bell_tolls = Song.create! ( { song_name: "For Whom The Bell Tolls", artist: j_cole } )

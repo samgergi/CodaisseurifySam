@@ -41,8 +41,4 @@ class ArtistsController < ApplicationController
     require(:artist).permit(:artist_name, :artist_image)
   end
 
-  def song_params
-    params.
-    require(:song).permit(:song_name, :artist_id)
-  end
 end

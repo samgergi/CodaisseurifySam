@@ -3,6 +3,10 @@ class SongsController < ApplicationController
     @songs = Song.all
   end
 
+  def new
+    @song = @artist.songs.build
+  end
+
 def show
   @songs = Song.all
 end

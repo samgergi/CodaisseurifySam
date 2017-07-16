@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   root  "songs#index"
 
   namespace :api do
-    resources :artists, only: [:show] do
-      resources :songs, only: [:index, :new, :create, :destroy]
+    resources :artist do
+      resources :songs
     end
   end
 end
